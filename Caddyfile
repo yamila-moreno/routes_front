@@ -1,0 +1,19 @@
+:9000/api {
+  proxy / http://routes_api:8000/api {
+    transparent
+  }
+}
+
+:9000/admin {
+  proxy / http://routes_api:8000/admin {
+    transparent
+  }
+}
+
+:9000/static {
+  root /routes_api_static
+}
+
+:9000 {
+  root /routes_front
+}

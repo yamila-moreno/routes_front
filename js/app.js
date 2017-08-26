@@ -19,7 +19,7 @@ $(document).ready(function() {
     var hash = new L.Hash(map);
 
     routes_bboxes = {};
-    $.get( "http://localhost:8000/routes", function( routes_dict ) {
+    $.get( "http://routes.com/api/routes", function( routes_dict ) {
         for (var id in routes_dict) {
             var customLink = "";
             if (routes_dict[id].link){
