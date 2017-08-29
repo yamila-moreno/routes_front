@@ -8,8 +8,8 @@ env:
   - secure: "dZVmWY/wdIh1ljOZSbE6ZbBbHtDDttzHM0iu/vpBJELiudED6ODx/r4TDckUzEV4jW63BiVDPgMioyWJn6UrF2msTDdu4qFotRj4KOgVIQK3zAPi/VgR7c+jSL95+V0OnhLZVmFrqlRY+DO3rgma0ROiPIWqfEosILn3C1KhKtY7V6nRvF0grXH5HuWzR+JwcZD41Jrk7WQHu/eIUDmbwjPRIvNSPxtrZSkPqB1mqO/NHdxvbld4Mlm5IL6pRnIaHSAMV5/dmDyEZ24OxgSWuKL23BHmDTF1nQG2djTNX7grNI263iykfcQHp1i19P/thnzvhoyVKpBjFK09O8zCGmTmBShMU26D7N8dWKgmArY4nF6ngqtKxmP8rbM2jT7iwH5csAQc5CZEVGMv/mUm/CHXQRt5Mjksii3/V7gdu9OPSRFklqRfXFvdoVLUtwjTNUBh6wJ3Qif5etk05VwdFuM+/Zx+CUOR5TPv+NdifHUQJygRMRoOIlf8mlqavqYLAA6GIxxhWERFS8KWlMo0IYun9pis8cfpGYA7/188dY2082JV1faaoyjfFNrFoYWjWiYLMhP+lBs1zfxL4KuABaqM7EWYxK6lOjxJ87i/S3hwUtBXFHtC5t4rh98ZtSuUl4ADYoGfSqK8FCoviVA+OqlbvaWBKEKmN5c0ksI2I+U=" # DOCKER_PASS
 
 before_script:
-- docker build -f Dockerfile -t ryms/routes_front:$TRAVIS_COMMIT .
+- docker build -f Dockerfile -t ryms/routes_front:latest .
 
 script:
 - docker login -u $DOCKER_USER -p $DOCKER_PASS
-- docker push ryms/routes_front:$TRAVIS_COMMIT
+- docker push ryms/routes_front:latest
