@@ -1,16 +1,16 @@
-:9000/api {
-  log stdout
-  proxy / http://routes_api:8000/api {
-    transparent
-  }
-}
+#:9000/api {
+#  log stdout
+#  proxy / http://routes_api:8000/api {
+#    transparent
+#  }
+#}
 
-:9000/admin {
-  log stdout
-  proxy / http://routes_api:8000/admin {
-    transparent
-  }
-}
+#:9000/admin {
+#  log stdout
+#  proxy / http://routes_api:8000/admin {
+#    transparent
+#  }
+#}
 
 :9000/static {
   log stdout
